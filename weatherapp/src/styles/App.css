@@ -1,0 +1,39 @@
+/* App.css */
+.app-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .country-list {
+    overflow-y: scroll;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .country-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .country-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .weather-info {
+    text-align: center;
+  }
+  
+  .info-text {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+  }
