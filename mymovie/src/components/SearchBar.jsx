@@ -18,7 +18,6 @@ export function SearchBar({onSubmit}) {
   }
 
   // Logic
-
   return (
       <form onSubmit={handleSubmitMovie} className="searchBar">
           <input
@@ -27,7 +26,7 @@ export function SearchBar({onSubmit}) {
           type="text"
           />
 
-          <button>Add Movie</button>
+          <button className="search-btn">Search Movie</button>
       </form>
   );
 }
