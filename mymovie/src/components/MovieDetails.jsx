@@ -2,22 +2,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export function MovieDetails({movieName}) {
-    const [movie, setMovie] = useState(null); // State to hold the movie data
+export function MovieDetails({movieProp}) {
+    const [movie, setMovie] = useState(null);
 
     useEffect(() => {
         const fetchMovieData = async () => {
-          const movieData = await getMovieObject(movieName);
-          setMovie(movieData); // Update the state with the movie data
+          const movieData = await getMovieObject(movieProp);
+          setMovie(movieData);
         };
     
-        if (movieName) {
-          fetchMovieData(); // Fetch the movie details if a movie name is provided
+        if (movieProp) {
+          fetchMovieData();
         }
-      }, [movieName]); // Run this effect every time movieName changes
+      }, [movieProp]);
     
       if (!movie) {
-        return <p>Loading...</p>; // Display loading message while fetching data
+        return <p>Loading...</p>;
       }
     
       return (
@@ -27,9 +27,9 @@ export function MovieDetails({movieName}) {
       );
 }
 
-async function getMovieObject(movieName) {
+async function getMovieObject(movieProp) {
     const API_KEY = "573c16c8";
-    const API_GET_MOVIE_REQUEST = `http://www.omdbapi.com/?apiKey=${API_KEY}&t=${movieName}`;
+    const API_GET_MOVIE_REQUEST = `http://www.omdbapi.com/?apiKey=${API_KEY}&t=${movieProp}`;
     console.log(API_GET_MOVIE_REQUEST);
 
     let response = "";

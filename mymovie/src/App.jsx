@@ -8,9 +8,9 @@ export default function App () {
   const [movieName, setMovieName] = useState("");
 
   // Functions
-  function setMovieDetails(movieName) {
-      if(movieName !== "") {
-        setMovieName(movieName);
+  function setMovieDetails(movie) {
+      if(movie !== "") {
+        setMovieName(movie);
       }
   }
 
@@ -19,7 +19,7 @@ export default function App () {
     <div className="app-container">
       <h1>My Movie!</h1>
       <SearchBar onSubmit={setMovieDetails}/>
-      <MovieDetails movie = {movieName}/>
+      <MovieDetails movieProp = {movieName}/>
     </div>
   );
 }
