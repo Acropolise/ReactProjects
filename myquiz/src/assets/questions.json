@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What is the captial of Israel?",
+        "answers": ["Tel Aviv", "Jerusalem", "Or Akiva", "Netanya"],
+        "correct": 1
+    },
+    {
+        "question": "Who is the richest person in history?",
+        "answers": ["Mansa Musa", "Elon Musk", "Vladimir Putin", "Jeff Bezos"],
+        "correct": 0
+    }
+]
