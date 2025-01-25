@@ -1,9 +1,15 @@
 import "../styles/App.css"
 
-export function PlayButton() {
+// eslint-disable-next-line react/prop-types
+export function PlayButton({ hideElements, showElements }) {
+
+  function startGame() {
+    hideElements();
+    showElements();
+  }
 
   return (
-    <button className = "btn">
+    <button className = "btn" onClick={startGame}>
       Start Game!
     </button>
   )
